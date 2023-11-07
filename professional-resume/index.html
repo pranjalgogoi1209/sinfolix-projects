@@ -1,25 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pranjal Gogoi | Professional Resume</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Font */
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "IBM Plex Sans", sans-serif;
+      }
+      body {
+        margin: 5vw 12vw 5vw 12vw;
+        background-color: #ccc;
+        background-image: linear-gradient(
+          to right,
+          rgb(193, 222, 234),
+          rgb(30, 137, 179)
+        );
+        /* box-shadow: 0vw 0vw 2.5vw rgba(0, 0, 0, 0.5); */
+      }
+      nav {
+        box-shadow: 0vw -0.4vw 1.2vw rgba(0, 0, 0, 0.6);
+        background-color: white;
+      }
+      .right-main,
+      .left-main {
+        box-shadow: 0vw 0.4vw 1.2vw rgba(0, 0, 0, 0.6);
+        background-color: white;
+      }
+      nav img {
+        box-shadow: 0vw 0vw 0.7vw rgba(0, 0, 0, 0.6);
+        transition: 200ms ease-in-out;
+      }
+      nav img:hover {
+        transform: rotate(-10deg);
+      }
+      nav {
+        background-color: white;
+      }
+      p {
+        font-size: 1.5vw;
+      }
+      h1 {
+        font-size: 3.1vw;
+      }
+      h2 {
+        font-size: 2.2vw;
+      }
+      h3 {
+        font-size: 1.9vw;
+      }
+      i {
+        font-size: 2.2vw;
+      }
+      .left-main,
+      .right-main {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+      }
+      .right-main {
+        width: 30vw;
+      }
+      .fa-github,
+      .fa-linkedin {
+        font-size: 5vw;
+        color: rgb(4, 133, 184);
+      }
+      .fa-github {
+        color: black;
+      }
+      .left-main a {
+        color: rgb(4, 133, 184);
+        text-decoration: underline;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        color: rgb(4, 133, 184);
+        text-decoration: underline;
+      }
+      .fa-linkedin {
+        transition: 800ms ease-out;
+      }
+      .fa-linkedin:hover {
+        transform: rotate(360deg);
+      }
+      h2,
+      h3 {
+        transition: 200ms ease-out;
+      }
+      h2:hover,
+      h3:hover {
+        transform: translateX(1vw);
+        color: rgb(4, 133, 184);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
     <nav>
-        <div class="logo">
-            <i class="fa-brands fa-pagelines"></i>
-            <h3>Pranjal Gogoi | Professional Resume</h3>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-8 p-3">
+            <div class="row align-items-center">
+              <div class="col-4">
+                <img
+                  src="./images/pranjal.png"
+                  alt="profile-picture"
+                  class="img-fluid rounded-circle"
+                  style="
+                    height: 14vw;
+                    width: 15vw;
+                    border: 0.3vw solid rgb(4, 133, 184);
+                  "
+                />
+              </div>
+              <div class="col-8 typo">
+                <h1>PRANJAL GOGOI</h1>
+                <p>Frontend Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-2 align-self-center me-4">
+            <div class="row">
+              <div class="col-6">
+                <a href="https://github.com/pranjalgogoi1209" target="_blank"
+                  ><i class="fa-brands fa-github fa-bounce"></i
+                ></a>
+              </div>
+              <div class="col-6">
+                <a
+                  href="https://www.linkedin.com/in/pranjal-gogoi-3aa73b229/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <button>
-            <i class="fa-solid fa-print"></i>
-            <h3>Print</h3>
-        </button>
+      </div>
     </nav>
 
-    <script src="app.js"></script>
-</body>
+    <!-- main -->
+    <div class="container mt-3 main">
+      <div class="row d-flex justify-content-between">
+        <!-- left main -->
+        <div class="col-md-7 left-main p-4">
+          <!-- profile -->
+          <div class="row">
+            <div class="col-1 pt-1">
+              <i
+                class="fa-solid fa-user fa-beat"
+                style="color: rgb(4, 133, 184)"
+              ></i>
+            </div>
+            <div class="col-11">
+              <h2>PROFILE:</h2>
+              <p>
+                Dedicated and results-driven Frontend Developer with a strong
+                academic foundation in Information Technology (B.Tech). I am
+                passionate about creating user-friendly and visually appealing
+                web applications. My commitment to staying updated with the
+                latest web development trends and technologies. Seeking
+                opportunities to contribute my expertise in frontend development
+                to an organization.
+              </p>
+            </div>
+          </div>
+
+          <!-- internship & trainings -->
+          <div class="row">
+            <div class="col-1 pt-1">
+              <i
+                class="fa-solid fa-chalkboard-user fa-beat"
+                style="color: rgb(4, 133, 184)"
+              ></i>
+            </div>
+            <div class="col-11">
+              <h2>INTERNSHIPS & TRAININGS:</h2>
+              <p class="mb-0">
+                <strong
+                  >React Development Intern at
+                  <a href="https://www.sinfolix.com/" target="_blank"
+                    >SINFOLIX TECHNOLOGIES</a
+                  ></strong
+                >
+              </p>
+              <p class="text-secondary">
+                <small>November 2023 - Present</small>
+              </p>
+              <p class="mb-0">
+                <strong
+                  >Web Development Intern at
+                  <a href="https://www.codealpha.tech/" target="_blank"
+                    >CODE ALPHA</a
+                  >
+                </strong>
+              </p>
+              <p class="text-secondary">
+                <small>October 2023 </small>
+              </p>
+              <p class="mb-0">
+                <strong
+                  >Full-Stack development at
+                  <a href="https://skill-edge.com/" target="_blank"
+                    >SKILLEDGE</a
+                  ></strong
+                >
+              </p>
+              <p class="text-secondary">
+                <small>January 2022 - June 2022 </small>
+              </p>
+              <p class="mb-0">
+                <strong
+                  >Python at
+                  <a href="https://www.infowiz.co.in/" target="_blank"
+                    >INFOWIZ</a
+                  >
+                </strong>
+              </p>
+              <p class="text-secondary">
+                <small>May 2020 - June 2020</small>
+              </p>
+            </div>
+          </div>
+
+          <!-- tech skills -->
+          <div class="row">
+            <div class="col-1 pt-1">
+              <i
+                class="fa-solid fa-star fa-beat"
+                style="color: rgb(4, 133, 184)"
+              ></i>
+            </div>
+            <div class="col-11">
+              <h2>TECH SKILLS:</h2>
+
+              <p class="mb-0">
+                <strong>LANGUAGES:</strong>
+              </p>
+              <p>Javascript, Css, Html, Python, C++, C</p>
+
+              <p class="mb-0">
+                <strong>FRAMEWORKS: </strong>
+              </p>
+              <p>Tailwind, Bootstrap</p>
+
+              <p class="mb-0">
+                <strong>LIBRARIES: </strong>
+              </p>
+              <p>React - A Javascript library, Redux - A Javascript library</p>
+
+              <p class="mb-0">
+                <strong>OTHERS:</strong>
+              </p>
+              <p>Git, GitHub, Visual Studio Code</p>
+            </div>
+          </div>
+
+          <!-- education qualification -->
+          <div class="row">
+            <div class="col-1 pt-1">
+              <i
+                class="fa-solid fa-user-graduate fa-beat"
+                style="color: rgb(4, 133, 184)"
+              ></i>
+            </div>
+            <div class="col-11">
+              <h2>EDUCATION QUALIFICATION:</h2>
+              <p class="mb-0">
+                <strong
+                  >B.TECH (Information Technology),
+                  <a href="https://www.globalinstitutes.edu.in/" target="_blank"
+                    >Global Group of Institutes, Amritsar, Punjab</a
+                  >
+                </strong>
+              </p>
+              <p class="text-secondary mb-0">
+                <small>2018 - 2022</small>
+              </p>
+              <p><strong>7.61 CGPA</strong></p>
+
+              <p class="mb-0">
+                <strong
+                  >HIGHER SECONDARY,
+                  <a
+                    href="https://schools.org.in/nagaon/18101101005/dawson-hs-&-m-p-school.html"
+                    target="_blank"
+                    >Dawson Hs and M.P. School, Nagaon, Assam</a
+                  >
+                </strong>
+              </p>
+              <p class="text-secondary mb-0">
+                <small>2016 - 2018 </small>
+              </p>
+              <p><strong>63.2 % </strong></p>
+
+              <p class="mb-0">
+                <strong
+                  >HIGH SCHOOL LEAVING CERTIFICATE,
+                  <a
+                    href="https://www.icbse.com/schools/shankardev-vidya-niketan-gp9wzk"
+                    target="_blank"
+                    >Shankardev Vidya Niketan, Howraghat, Assam</a
+                  ></strong
+                >
+              </p>
+              <p class="text-secondary mb-0">
+                <small>2003 - 2016</small>
+              </p>
+              <p><strong>83.5 % </strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- right main -->
+        <div class="col-md-4 right-main p-4">
+          <div class="row">
+            <h3>PERSONAL DETAILS</h3>
+            <p class="mt-2">
+              <a
+                href="https://maps.app.goo.gl/dX58okTHV5zbyDCy6"
+                target="_blank"
+                >Howraghat, Assam, 782481
+                <br />
+                India
+              </a>
+              <br />
+              <a href="call:7086676284" target="_blank">7086676284</a>
+              <br />
+              <a href="mailto:gogoipranjal2022@gmail.com" target="_blank"
+                >gogoipranjal2022@gmail.com</a
+              >
+            </p>
+            <p class="mt-3">
+              <span class="text-secondary">Date of birth</span>
+              <br />
+              12/09/1999
+            </p>
+          </div>
+          <div class="row">
+            <h3>PROJECTS:</h3>
+            <p class="mb-0 mt-2">
+              <strong>BuyS-mart, An E-Commerce website using REACT</strong>
+            </p>
+            <p>
+              “Users have to register or sign-in through their respective mail
+              id and can use the services. They can search for products to add
+              in cart and also able to remove or add items in cart”
+            </p>
+
+            <p class="mb-0 mt-2">
+              <strong>Currency Converter App using REACT & TAILWIND CSS</strong>
+            </p>
+            <p>
+              “It provides users with a convenient and user-friendly way to
+              convert between different currencies. The app integrates with a
+              reliable API to fetch real-time exchange rate data”
+            </p>
+          </div>
+          <div class="row">
+            <h3>SOFTSKILLS:</h3>
+            <div class="d-flex flex-column gap-4">
+              <div>
+                <p class="mb-1">Communication Skill</p>
+                <div
+                  class="rounded-pill border z-1 position-absolute ms-5"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(181, 175, 175);
+                  "
+                ></div>
+                <div
+                  class="rounded-pill border z-2 position-absolute"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(4, 133, 184);
+                  "
+                ></div>
+              </div>
+
+              <div>
+                <p class="mb-1">Problem solving</p>
+                <div
+                  class="rounded-pill border z-1 position-absolute ms-5"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(181, 175, 175);
+                  "
+                ></div>
+                <div
+                  class="rounded-pill border z-2 position-absolute"
+                  style="
+                    height: 0.8vw;
+                    width: 9vw;
+                    background-color: rgb(4, 133, 184);
+                  "
+                ></div>
+              </div>
+
+              <div>
+                <p class="mb-1">Adaptibility</p>
+                <div
+                  class="rounded-pill border z-1 position-absolute ms-5"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(181, 175, 175);
+                  "
+                ></div>
+                <div
+                  class="rounded-pill border z-2 position-absolute"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(4, 133, 184);
+                  "
+                ></div>
+              </div>
+
+              <div>
+                <p class="mb-1">Team Work</p>
+                <div
+                  class="rounded-pill border z-1 position-absolute ms-5"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(181, 175, 175);
+                  "
+                ></div>
+                <div
+                  class="rounded-pill border z-2 position-absolute"
+                  style="
+                    height: 0.8vw;
+                    width: 12vw;
+                    background-color: rgb(4, 133, 184);
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
