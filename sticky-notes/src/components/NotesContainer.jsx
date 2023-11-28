@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default function NotesContainer({ notes, setNotes, setNoteText }) {
   return (
     <Wrapper className="NotesContainter">
-      <h1>NOTES</h1>
+      <h1>STICKY NOTES</h1>
       <div className="notes">
         {notes.map(note => (
           <Note
