@@ -23,3 +23,4 @@ npm install socket.io-client
 npm install react-scroll-to-bottom
 npm install react-router-dom
 npm install styled-components
+npm install react-icons

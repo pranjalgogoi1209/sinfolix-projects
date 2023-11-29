@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
+export let user;
+
 export default function Join() {
+  const [name, setName] = useState();
+
+  const inputElement = useRef();
+  const sendUser = () => {
+    user = inputElement.current.value;
+    inputElement.current.value = "";
+  };
+
   return (
     <Wrapper>
       <div className="Join">
@@ -16,9 +26,16 @@ export default function Join() {
         </div>
 
         <form>
-          <input type="text" placeholder="Enter Your Name" />
-          <Link to={"/chat"}>
-            <button type="submit">LogIn</button>
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            ref={inputElement}
+            onChange={e => setName(e.target.value)}
+          />
+          <Link to={"/chat"} onClick={e => (name ? null : e.preventDefault())}>
+            <button type="submit" onClick={sendUser}>
+              LogIn
+            </button>
           </Link>
         </form>
       </div>
@@ -59,17 +76,22 @@ const Wrapper = styled.div`
         font-size: 1.5vw;
         padding: 1vw;
         background-color: #b6efa7;
-        border: none;
+        border: 0.05vw solid #a4d796;
         border-radius: 1vw;
         outline: transparent;
       }
       a {
         border: 1px solid black;
-        background-color: #faa538;
+        background-color: #fbb760;
         text-align: center;
         border: none;
         border-radius: 1vw;
+        transition: all 0.1s;
+        &:hover {
+          background-color: #faa538;
+        }
         button {
+          width: 100%;
           font-size: 1.5vw;
           padding: 1vw;
           cursor: pointer;
